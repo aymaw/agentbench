@@ -1,0 +1,11 @@
+flowchart LR
+  S[Seeded synthetic suite] --> W[Closed tool world]
+  S --> A[Reference or model agent]
+  A --> D[Action schema check]
+  D --> W
+  W --> O[Observation]
+  O --> A
+  W --> T[Complete tool trace]
+  T --> E[Evidence and safety scorer]
+  E --> R[JSON report and intervals]
+  R --> C[Paired regression gate]
